@@ -54,6 +54,13 @@ const fname = document.getElementById("fname");
 const lname = document.getElementById("lname");
 const species = document.getElementById("species");
 const breed = document.getElementById("breed");
+const div = document.getElementsByClassName("animali")[0];
+
+function crea(variabile) {
+  const p = document.createElement("p");
+  div.appendChild(p);
+  p.textContent = variabile;
+}
 
 class Animal {
   constructor(petName, ownerName, species, breed) {
@@ -77,5 +84,15 @@ formNode.onsubmit = function (e) {
   species.value = "";
   breed.value = "";
 
+  crea(
+    "nome cane:" +
+      creatura.petName +
+      "proprietario:" +
+      creatura.ownerName +
+      " specie:" +
+      creatura.species +
+      "razza:" +
+      creatura.breed
+  );
   console.log(creature);
 };
