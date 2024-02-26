@@ -42,10 +42,12 @@ class User {
 a = new User("Francesco", "Totti", 47, "Roma");
 b = new User("Daniele", "De Rossi", 40, "Roma");
 c = new User("Lorenzo", "Pellegrini", 26, "Roma");
+d = new User("Bryan", "Cristante", 26, "Bergamo");
 
 console.log(a.ageCompare(b));
 console.log(b.ageCompare(c));
 console.log(c.ageCompare(a));
+console.log(c.ageCompare(d));
 
 // --------------------------------esercizio2---------------------------------------------------
 
@@ -85,13 +87,13 @@ formNode.onsubmit = function (e) {
   breed.value = "";
 
   crea(
-    "nome cane:" +
+    " Nome: " +
       creatura.petName +
-      "proprietario:" +
+      " Proprietario: " +
       creatura.ownerName +
-      " specie:" +
+      " Specie: " +
       creatura.species +
-      "razza:" +
+      " Razza: " +
       creatura.breed
   );
   console.log(creature);
